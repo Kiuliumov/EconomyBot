@@ -1,0 +1,26 @@
+{
+  "name": "economybot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kiuliumov/EconomyBot.git"
+  },
+  "author": "Kiuliumov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kiuliumov/EconomyBot/issues"
+  },
+  "homepage": "https://github.com/Kiuliumov/EconomyBot#readme",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.55.0"
+  }
+}
