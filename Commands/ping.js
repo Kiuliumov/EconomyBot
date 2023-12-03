@@ -9,7 +9,7 @@ module.exports = {
 
     const embed = new EmbedBuilder()
       .setTitle("Pong!")
-      .setDescription(`Your server ping is ${Math.round(client.ws.ping)} MS.`)
+      .setDescription(`Your server ping is ${Math.round(interaction.client.ws.ping)} MS.`)
       .setImage("https://media.giphy.com/media/4IAzyrhy9rkis/giphy.gif");
     await interaction.channel.send({ embeds: [embed] });
     msg.delete()

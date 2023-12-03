@@ -1,8 +1,10 @@
 require("dotenv").config();
 const fs = require("fs");
 const path = require("path");
+const mongoose = require('mongoose')
 
-const { DISCORD_TOKEN: token } = process.env;
+
+const { DISCORD_TOKEN: token,MONGODB_SRV = database } = process.env;
 
 const { Client, GatewayIntentBits, Collection } = require('discord.js');
 const client = new Client({
@@ -39,6 +41,12 @@ for (const file of commandFiles) {
         console.log(`Error with ${filePath}`);
     }
 }
+mongoose.connect(database, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+        console.log('Connected to the database!');
+    })
+    .catch((err) => {
+        console.log(err);
+    });
 
 client.login(token);
-global.client = client
