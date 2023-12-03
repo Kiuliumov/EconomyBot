@@ -5,3 +5,5 @@ const profileSchema = new mongoose.Schema({
   balance: { type: Number, default: 10 },
 });
 
+const model = mongoose.model('cantinaDB',profileSchema)
+module.exports = model
