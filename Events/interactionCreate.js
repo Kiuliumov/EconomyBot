@@ -6,11 +6,11 @@ module.exports = {
     if (!interaction.isChatInputCommand()) return;
     let profileData;
     try {
-      profileData = await profileModel.findOne({ userId: interaction.user.id });
+      profileData = await profileModel.findOne({ userID: interaction.user.id });
       if (!profileData) {
         profileData = await profileModel.create({
-          userId: interaction.user.id,
-          serverId: interaction.guild.id,
+          userID: interaction.user.id,
+          serverID: interaction.guild.id,
         });
       }
     } catch (err) {
