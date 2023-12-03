@@ -4,7 +4,7 @@ const path = require("path");
 const mongoose = require('mongoose')
 
 
-const { DISCORD_TOKEN: token,MONGODB_SRV = database } = process.env;
+const { DISCORD_TOKEN: token,MONGODB_SRV:database } = process.env;
 
 const { Client, GatewayIntentBits, Collection } = require('discord.js');
 const client = new Client({
