@@ -7,5 +7,6 @@ module.exports = {
   async execute(interaction, profileData) {
     const { balance } = profileData;
     const username = interaction.user.username
+    await interaction.reply(`${username} has ${balance} cantina coins.`)
   },
 };
